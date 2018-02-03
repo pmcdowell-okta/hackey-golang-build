@@ -30,6 +30,9 @@ buildlinux:
 run:
 	bin/main
 
+runlinux:
+	docker run -it -p 3000:3000 -v `pwd`:/code  ubuntu /code/bin/linux_amd64/main
+
 clean:
 	rm -rf bin
 	rm -rf pkg
