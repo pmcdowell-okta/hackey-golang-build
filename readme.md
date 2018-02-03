@@ -33,3 +33,16 @@ There is a test in the src/localtest directory to make sure you can read the loc
 
 You can go the the `src/localhtml` directory and run `go test`,
 or you can run the test globally using `make test`
+
+#### Try it on Docker
+
+If you want to try this code on Docker, you can run:
+
+*   `make buildlinux`
+*   `make dockerrun`
+
+This will spin up the example on a Ubuntu image in Docker, and open port 3000 so you can try it out
+
+#### There is also an option to build for Windows
+
+* `make buildwindows`
