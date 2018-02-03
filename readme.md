@@ -26,3 +26,10 @@ Then it uses:
 When you are done you should have a binary called main in the `bin` directory
 
 If it is working properly you should be able to run it.
+
+#### test
+
+There is a test in the src/localtest directory to make sure you can read the local filesystem, but it is very basic
+
+You can go the the `src/localhtml` directory and run `go test`,
+or you can run the test globally using `make test`

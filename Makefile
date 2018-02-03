@@ -4,7 +4,7 @@ build:
 	mkdir -p src/localhtml
 
 #Clear out directory
-	rm -rf src/localhtml/*
+	rm -f src/localhtml/localhtml.go
 
 #Go to HTML Directory and make go-bindata package
 	cd html ; \
@@ -36,7 +36,11 @@ runlinux:
 clean:
 	rm -rf bin
 	rm -rf pkg
-	rm -rf src/localhtml/*
+	rm -rf src/localhtml/localhtml.go
+
+test:
+	go test ./...
+
 
 
 
