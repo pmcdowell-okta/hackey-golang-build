@@ -1,8 +1,17 @@
 
 build:
+#Make sure the src/localhtml directory exists
+	mkdir -p src/localhtml
+
+#Clear out directory
 	rm -rf src/localhtml/*
+
+#Go to HTML Directory and make go-bindata package
 	cd html ; \
 	go-bindata -prefix "html/" -pkg localhtml -o ../src/localhtml/localhtml.go .
+
+#Do the regular build stuff
+
 	go build ./...
 	go install ./...
 
