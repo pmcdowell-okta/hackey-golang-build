@@ -39,7 +39,9 @@ or you can run the test globally using `make test`
 If you want to try this code on Docker, you can run:
 
 *   `make buildlinux`
-*   `make dockerrun`
+*   `make runlinux`
+
+*Everuthing is documented in the Makefile* 
 
 This will spin up the example on a Ubuntu image in Docker, and open port 3000 so you can try it out
 
