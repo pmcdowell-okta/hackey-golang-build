@@ -21,7 +21,7 @@ in the `src/localhtml` directory.
 
 Change your GOPATH Environment variable to be your working directory
 
-`export GOPATH=\`pwd\``
+<code>export GOPATH=&grave;pwd&grave;</code>
 
 Then it uses:
 * `go build ./...` Builds the packages
