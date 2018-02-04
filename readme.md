@@ -13,15 +13,15 @@ This is how I build my binaries for this.
 
 #### How do I use it:
 
+Set your GOPATH Environment variable to be your working directory
+
+<code>export GOPATH=&grave;pwd&grave;</code>
+
 1. Put everything you want to include in your package in the html directory
 2. use `make build` to build you executable
 
 Make uses go-bindata to basically zip everything up, and creates a package
 in the `src/localhtml` directory.
-
-Change your GOPATH Environment variable to be your working directory
-
-<code>export GOPATH=&grave;pwd&grave;</code>
 
 Then it uses:
 * `go build ./...` Builds the packages
