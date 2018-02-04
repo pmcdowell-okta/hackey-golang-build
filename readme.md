@@ -19,6 +19,10 @@ This is how I build my binaries for this.
 Make uses go-bindata to basically zip everything up, and creates a package
 in the `src/localhtml` directory.
 
+Change your GOPATH Environment variable to be your working directory
+
+`export GOPATH=`pwd``
+
 Then it uses:
 * `go build ./...` Builds the packages
 * `go install ./...` Builds the binaries
