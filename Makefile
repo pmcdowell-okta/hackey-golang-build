@@ -41,7 +41,14 @@ clean:
 test:
 	go test ./...
 
-
+#Continuous rebuild, anytime a file changes, the recompiles everything and launches it in Docker
+monitor:
+	fswatch -1 -e ".lock" -i "*.go" -i "*.html" ./src ./html
+	docker stop  `docker ps -a -q`
+	make build
+	make buildlinux
+	make runlinux
+	make monitor
 
 
 
