@@ -53,7 +53,7 @@ monitor:
 #This is nuts, and will require some homework and tweaking, but I was able to make the GOLANG windows
 #binary run in Docker using Wine!
 windowsrun:
-	docker run -it -v `pwd`:/test -p 3000:9090  -e DISPLAY=$MYIP:0 winer /bin/bash -c  "/usr/bin/wine /test/bin/windows/main.exe"
-
+	docker run -it -v `pwd`:/test -p 3000:9090  -e DISPLAY=$MYIP:0 winer /bin/bash -c  "/usr/bin/wine /test/bin/windows_386/main.exe"
+	
 
 
