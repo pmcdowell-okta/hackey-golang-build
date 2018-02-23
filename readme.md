@@ -29,11 +29,11 @@ The following seems to work
 
 copy go-bindata into any directory on your PATH
 
+Now that go-bindata is installed ! (you installed it right?)
+
 Set your GOPATH Environment variable to be your working directory
 
 <code>export GOPATH=&grave;pwd&grave;</code>
-
-Now that go-bindata is installed
 
 1. Put everything you want to include in your package in the html directory
 2. use `make build` to build you executable
