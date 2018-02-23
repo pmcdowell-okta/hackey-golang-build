@@ -15,7 +15,7 @@ This is how I build my binaries for this.
 
 ##### First you need to install go-bindata
 
-go-bindata is a cool the turns any file into a Golang file, that
+go-bindata is a tool the turns any file into a Golang file, that
 you can then compile with your program as a package or a standalone
 file.
 
@@ -23,9 +23,9 @@ To install go-bindata:
 
 The following seems to work
 
-    `go get github.com/jteeuwen/go-bindata`
-    `cd $GOPATH/src/github.com/jteeuwen/go-bindata/go-bindata`
-    `go build`
+    go get github.com/jteeuwen/go-bindata
+    cd $GOPATH/src/github.com/jteeuwen/go-bindata/go-bindata
+    go build
 
 copy go-bindata into any directory on your PATH
 
