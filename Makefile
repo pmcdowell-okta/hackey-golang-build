@@ -1,6 +1,9 @@
 # I'm not an expert on Makefiles, but I found this useful
 GOPATH=$(shell pwd)
 
+setup:
+	go get "github.com/gorilla/mux"
+
 build:
 #Make sure the src/localhtml directory exists
 	mkdir -p src/localhtml
