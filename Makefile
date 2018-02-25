@@ -1,5 +1,5 @@
 # I'm not an expert on Makefiles, but I found this useful
-GOPATH=$(shell pwd)
+#GOPATH=$(shell pwd)
 
 setup:
 	go get "github.com/gorilla/mux"
