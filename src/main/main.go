@@ -19,11 +19,32 @@ func catchAllHtml(w http.ResponseWriter, r *http.Request) {
 
 	// This code fetches the html file I want. Pulling from Assets that are compiled in
 	data, err := localhtml.Asset(r.RequestURI[1:])
-	if err != nil {
-		// Asset was not found.
-		logwrapper("File not found: "+r.RequestURI[1:])
+
+	fmt.Println(len(data))
+
+	// did not specify index.html or index.htm
+	if ( len(data)==0 ) {
+		data, err := localhtml.Asset("index.htm")
+		if ( err!=nil) {
+			data, err := localhtml.Asset("index.html")
+			if ( err==nil) {
+				w.Write(data) // send data to client side
+
+			}
+
+		} else {
+			w.Write(data) // send data to client side
+
+		}
+
 	} else {
-		fmt.Fprintf(w, string(data)) // send data to client side
+
+		if err != nil {
+			// Asset was not found.
+			logwrapper("File not found: " + r.RequestURI[1:])
+		} else {
+			w.Write(data) // send data to client side
+		}
 	}
 }
 
