@@ -7,9 +7,7 @@ setup:
 
 build:
 #Make sure the src/localhtml directory exists
-	mkdir src
-	mkdir src/localhtml
-
+	mkdir -p src/localhtml
 
 #Clear out directory
 	rm -f src/localhtml/localhtml.go
