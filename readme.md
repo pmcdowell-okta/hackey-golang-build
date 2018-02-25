@@ -19,17 +19,13 @@ go-bindata is a tool the turns any file into a Golang file, that
 you can then compile with your program as a package or a standalone
 file.
 
-To install go-bindata:
+To install go-bindata-assetfs:
 
-The following seems to work
+https://github.com/elazarl/go-bindata-assetfs
 
-    go get github.com/jteeuwen/go-bindata
-    cd $GOPATH/src/github.com/jteeuwen/go-bindata/go-bindata
-    go build
+copy go-bindata-assetfs into any directory on your PATH
 
-copy go-bindata into any directory on your PATH
-
-Now that go-bindata is installed ! (you installed it right?)
+Now that go-bindata-assetfs is installed ! (you installed it right?)
 
 Set your GOPATH Environment variable to be your working directory
 
