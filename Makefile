@@ -4,6 +4,8 @@ GOPATH=$(shell pwd)
 setup:
 	go get "github.com/gorilla/mux"
 	go get "github.com/elazarl/go-bindata-assetfs"
+	go get github.com/jteeuwen/go-bindata/...
+	go get github.com/elazarl/go-bindata-assetfs/...
 
 build:
 #Make sure the src/localhtml directory exists
