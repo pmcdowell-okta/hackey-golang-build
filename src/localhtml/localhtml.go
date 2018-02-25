@@ -85,7 +85,7 @@ func imgOktaPng() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "img/Okta.png", size: 110617, mode: os.FileMode(420), modTime: time.Unix(1499921423, 0)}
+	info := bindataFileInfo{name: "img/Okta.png", size: 110617, mode: os.FileMode(420), modTime: time.Unix(1519539967, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -105,7 +105,7 @@ func indexHtml() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "index.html", size: 76, mode: os.FileMode(420), modTime: time.Unix(1519536853, 0)}
+	info := bindataFileInfo{name: "index.html", size: 76, mode: os.FileMode(420), modTime: time.Unix(1519539967, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
