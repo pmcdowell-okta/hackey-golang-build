@@ -11,9 +11,9 @@ build:
 #Clear out directory
 	rm -f src/localhtml/localhtml.go
 
-#Go to HTML Directory and make go-bindata package
+#Go to HTML Directory and make go-bindata-assetfs package
 	cd html ; \
-	go-bindata -prefix "html/" -pkg localhtml -o ../src/localhtml/localhtml.go .
+	go-bindata-assetfs -prefix "html/" -pkg localhtml -o ../src/localhtml/localhtml.go .
 
 #Do the regular build stuff
 
@@ -46,7 +46,7 @@ rundocker:
 	docker ps | grep ubuntu | awk '{ print $$1 }' | xargs docker kill > /dev/null &
 	docker ps | grep winer | awk '{ print $$1 }' | xargs docker kill > /dev/null &
 	cd html ; \
-	go-bindata -prefix "html/" -pkg localhtml -o ../src/localhtml/localhtml.go .
+	go-bindata-assetfs -prefix "html/" -pkg localhtml -o ../src/localhtml/localhtml.go .
 	GOOS=linux GOARCH=amd64 go install ./...
 	GOOS=linux GOARCH=amd64 go build ./...
 	docker run -itd -p 3000:3000 -v `pwd`:/code  ubuntu /code/bin/linux_amd64/main
@@ -78,7 +78,7 @@ windowsrun:
 	docker ps | grep winer | awk '{ print $$1 }' | xargs docker kill > /dev/null &
 	docker ps | grep ubuntu | awk '{ print $$1 }' | xargs docker kill > /dev/null &
 	cd html ; \
-	go-bindata -prefix "html/" -pkg localhtml -o ../src/localhtml/localhtml.go .
+	go-bindata-assetfs -prefix "html/" -pkg localhtml -o ../src/localhtml/localhtml.go .
 	GOOS=windows GOARCH=386 go install ./...
 	GOOS=windows GOARCH=386 go build ./...
 	docker run -itd -v `pwd`:/test -p 3000:3000  -e DISPLAY=$MYIP:0 oktaadmin/winer /bin/bash -c  "/usr/bin/wine /test/bin/windows_386/main.exe"
