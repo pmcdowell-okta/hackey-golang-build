@@ -35,7 +35,6 @@ buildmacos:
 	
 
 buildwindows:
-	cd html ; \
 	go-bindata-assetfs -prefix "html/" -pkg localhtml -o ./src/localhtml/localhtml.go html/...
 
 	@GOPATH=$(GOPATH) GOOS=windows GOARCH=386 go install ./...
