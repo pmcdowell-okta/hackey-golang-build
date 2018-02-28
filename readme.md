@@ -28,7 +28,7 @@ GOPATH so everything will be found.
 1. Put everything you want to include in your package in the html directory
 2. use `make build` to build you executable
 
-Make uses go-bindata to basically zip everything up, and creates a package
+Make uses go-bindata-assetfs to basically zips everything up, and creates a package
 in the `src/localhtml` directory.
 
 Then it uses:
@@ -37,9 +37,6 @@ Then it uses:
 
 When you are done you should have a binary called main in the `bin` directory
 
-If it is working properly you should be able to run it.
-
-`make run`
 
 #### test
 
