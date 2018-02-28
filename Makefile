@@ -6,20 +6,20 @@ SHELL := /bin/bash
 PATH := bin:$(PATH)
 
 setup:
-        @GOPATH=$(GOPATH) go get "github.com/gorilla/mux"
-        @GOPATH=$(GOPATH) go get "github.com/elazarl/go-bindata-assetfs"
-        @GOPATH=$(GOPATH) go get github.com/jteeuwen/go-bindata/...
-        @GOPATH=$(GOPATH) go get github.com/elazarl/go-bindata-assetfs/...
+	@GOPATH=$(GOPATH) go get "github.com/gorilla/mux"
+	@GOPATH=$(GOPATH) go get "github.com/elazarl/go-bindata-assetfs"
+	@GOPATH=$(GOPATH) go get github.com/jteeuwen/go-bindata/...
+	@GOPATH=$(GOPATH) go get github.com/elazarl/go-bindata-assetfs/...
 
 build:
 #Make sure the src/localhtml directory exists
-        mkdir -p src/localhtml
+	mkdir -p src/localhtml
 
 #Clear out directory
-        rm -f src/localhtml/localhtml.go
+	rm -f src/localhtml/localhtml.go
 
 #Go to HTML Directory and make go-bindata-assetfs package
-        go-bindata-assetfs -prefix "html/" -pkg localhtml -o ./src/localhtml/localhtml.go html/...
+	go-bindata-assetfs -prefix "html/" -pkg localhtml -o ./src/localhtml/localhtml.go html/...
 
 
 #Do the regular build stuff
