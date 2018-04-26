@@ -1,4 +1,8 @@
 # Hackey Golang Builder
+
+Try running it in Docker
+`docker run -it -p 3000:3000 -e github='https://github.com/pmcdowell-okta/hackey-golang-build.git' oktaadmin/gitpull`
+
 #### For Golang Projects where you want to bake your HTML into your binary
 
 This project is mostly for my own benefit, but others might find it useful.
